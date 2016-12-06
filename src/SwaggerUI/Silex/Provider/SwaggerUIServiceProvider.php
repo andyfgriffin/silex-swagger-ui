@@ -2,8 +2,9 @@
 
 namespace SwaggerUI\Silex\Provider;
 
+use Pimple\ServiceProviderInterface;
+use Pimple\Container;
 use Silex\Application;
-use Silex\ServiceProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -67,7 +68,7 @@ class SwaggerUIServiceProvider implements ServiceProviderInterface
      *
      * @param Application $app
      */
-    public function register(Application $app) {}
+    public function register(Container $app) {}
 
     /**
      * Get a public file
