@@ -5,6 +5,7 @@ namespace SwaggerUI\Silex\Provider;
 use Pimple\ServiceProviderInterface;
 use Pimple\Container;
 use Silex\Application;
+use Silex\Api\BootableProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * The SwaggerUIServiceProvider adds views for swagger UI to a silex app, making
  * it possible to view swagger docs.
  */
-class SwaggerUIServiceProvider implements ServiceProviderInterface
+class SwaggerUIServiceProvider implements ServiceProviderInterface, BootableProviderInterface
 {
     /**
      * Add routes to the swagger UI documentation browser
